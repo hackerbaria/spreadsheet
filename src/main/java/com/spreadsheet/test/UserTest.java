@@ -11,6 +11,7 @@ public class UserTest {
 		User inputUser = new User();
 		inputUser.setName("ngoc");
 		inputUser.setPassword("ngoc@123");
+		inputUser.setEmail("gaonline@gmail.com");
 		/*inputUser.setName("thong");
 		inputUser.setPassword("password@123");*/
 		

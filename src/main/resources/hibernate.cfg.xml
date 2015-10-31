@@ -28,6 +28,8 @@
         
  		<!-- we will declare models at here -->
  		<mapping class="com.spreadsheet.model.User"/>
+ 		<mapping class="com.spreadsheet.model.SpreadSheet"/>
+ 		<mapping class="com.spreadsheet.model.Data"/>
  		
  		 
     </session-factory>
