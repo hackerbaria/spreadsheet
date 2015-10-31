@@ -1,6 +1,9 @@
 package com.spreadsheet.test;
 
-import java.util.Date;
+import java.sql.Date;
+import java.sql.Timestamp;
+
+
 
 import com.spreadsheet.model.DataLog;
 import com.spreadsheet.model.User;
@@ -19,7 +22,16 @@ public class DataLogTest {
 		dataLog.setColumn("B");
 		dataLog.setRow(3);
 		dataLog.setData("Ngoc Su Ty");
-		dataLog.setTime(new Date());
+		
+		
+		java.util.Date dt = new java.util.Date();
+
+		java.text.SimpleDateFormat sdf = 
+		     new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+		String currentTime = sdf.format(dt);
+		
+		dataLog.setTime(dt);
 		
 		User u = userServices.findUserSheetById(1);
 		

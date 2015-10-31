@@ -1,6 +1,8 @@
 package com.spreadsheet.model;
 
 import java.io.Serializable;
+
+
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -39,10 +41,14 @@ public class DataLog implements Serializable {
     @JoinColumn(name="idUser")
 	private User userdataLog;
 	
-	@Column(name = "time", columnDefinition="DATETIME")
 	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "time")	
 	private Date time;
 	
+	public void setTime(Date time) {
+		this.time = time;
+	}
+
 	@Column(name = "data")
 	private String data;
 
@@ -74,9 +80,7 @@ public class DataLog implements Serializable {
 		return time;
 	}
 
-	public void setTime(Date time) {
-		this.time = time;
-	}
+	
 
 	public String getData() {
 		return data;
@@ -86,6 +90,10 @@ public class DataLog implements Serializable {
 		this.data = data;
 	}
 
+	
+	
+	
+	
 	public DataLog(String column, int row, User userdataLog, Date time,
 			String data) {
 		super();
@@ -95,7 +103,7 @@ public class DataLog implements Serializable {
 		this.time = time;
 		this.data = data;
 	}
-	
+
 	public DataLog() {
 	}
 
