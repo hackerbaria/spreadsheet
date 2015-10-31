@@ -10,6 +10,10 @@ public class SpreadSheetServices {
 		return ssDao.save(ss);
 	}
 	
+	public SpreadSheet findSpreadSheetById(int id) {
+		return ssDao.findById(id);
+	}
+	
 	
 
 }

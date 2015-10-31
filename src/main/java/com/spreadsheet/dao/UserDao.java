@@ -6,6 +6,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
+import com.spreadsheet.model.SpreadSheet;
 import com.spreadsheet.model.User;
 
 public class UserDao {
@@ -48,6 +49,22 @@ public class UserDao {
 		session.beginTransaction();
 
 		session.save(u);
+		
+		
+		session.getTransaction().commit();
+		
+		session.close();
+
+		return u;
+	}
+	
+	public User findById(int id) {
+		SessionFactory sf = HibernateUtil.getSessionFactory();
+		Session session = sf.openSession();
+		session.beginTransaction();
+
+		User u = (User) session.get(User.class, id);
+
 		
 		
 		session.getTransaction().commit();

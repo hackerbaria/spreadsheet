@@ -21,5 +21,22 @@ public class SpreadSheetDao {
 
 		return true;
 	}
+	
+	
+	public SpreadSheet findById(int id) {
+		SessionFactory sf = HibernateUtil.getSessionFactory();
+		Session session = sf.openSession();
+		session.beginTransaction();
+
+		SpreadSheet ss = (SpreadSheet) session.get(SpreadSheet.class, id);
+
+		
+		
+		session.getTransaction().commit();
+		
+		session.close();
+
+		return ss;
+	}
 
 }

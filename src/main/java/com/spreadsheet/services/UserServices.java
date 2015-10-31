@@ -1,6 +1,7 @@
 package com.spreadsheet.services;
 
 import com.spreadsheet.dao.UserDao;
+import com.spreadsheet.model.SpreadSheet;
 import com.spreadsheet.model.User;
 
 public class UserServices {
@@ -22,6 +23,10 @@ public class UserServices {
 	 */
 	public User saveUser(User user) {
 		return userDao.save(user);
+	}
+	
+	public User findUserSheetById(int id) {
+		return userDao.findById(id);
 	}
 
 }

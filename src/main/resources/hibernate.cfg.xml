@@ -30,6 +30,7 @@
  		<mapping class="com.spreadsheet.model.User"/>
  		<mapping class="com.spreadsheet.model.SpreadSheet"/>
  		<mapping class="com.spreadsheet.model.Data"/>
+ 		<mapping class="com.spreadsheet.model.DataLog"/>
  		
  		 
     </session-factory>

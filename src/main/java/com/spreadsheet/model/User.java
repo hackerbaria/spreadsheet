@@ -57,10 +57,22 @@ public class User implements Serializable {
 	
 	@OneToMany(mappedBy="user")
 	private Set<SpreadSheet> spreadSheets;
+	
+	
+	@OneToMany(mappedBy="userdataLog")
+	private Set<DataLog> dataLogs;
 
 	
 	public Set<SpreadSheet> getSpreadSheets() {
 		return spreadSheets;
+	}
+
+	public Set<DataLog> getDataLogs() {
+		return dataLogs;
+	}
+
+	public void setDataLogs(Set<DataLog> dataLogs) {
+		this.dataLogs = dataLogs;
 	}
 
 	public void setSpreadSheets(Set<SpreadSheet> spreadSheets) {

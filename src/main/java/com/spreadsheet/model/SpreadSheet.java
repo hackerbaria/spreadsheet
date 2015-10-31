@@ -30,7 +30,7 @@ public class SpreadSheet implements Serializable {
     @JoinColumn(name="idOwner")
 	private User user;
 	
-	@OneToMany(mappedBy="spreadsheetdata")
+	@OneToMany(mappedBy="spreadsheetData")
 	private Set<Data> datas;
 
 	public int getId() {
